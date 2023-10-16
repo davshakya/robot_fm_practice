@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20231016 07:43:53.891" rpa="false" schemaversion="3">
+<suite id="s1" name="TC1" source="d:\Dev_Progs\Robot_framework_demo\testcases\TC1.robot">
+<kw name="Initialise the browser" library="base_data" type="SETUP">
+<kw name="Launch browser" library="base_data">
+<kw name="Evaluate" library="BuiltIn">
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231016 07:43:54.861" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000014D0CEAC4F0&gt;</msg>
+<status status="PASS" starttime="20231016 07:43:54.861" endtime="20231016 07:43:54.861"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20231016 07:43:54.861" endtime="20231016 07:43:54.861"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20231016 07:43:54.861" endtime="20231016 07:43:54.869"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-extensions</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20231016 07:43:54.869" endtime="20231016 07:43:54.869"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20231016 07:43:54.869" endtime="20231016 07:43:54.879"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-popup-blocking</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20231016 07:43:54.879" endtime="20231016 07:43:54.879"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--dns-prefetch-disable</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20231016 07:43:54.879" endtime="20231016 07:43:54.879"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>window-size\=1920,1080</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20231016 07:43:54.879" endtime="20231016 07:43:54.879"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-blink-features\=AutomationControlled</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20231016 07:43:54.879" endtime="20231016 07:43:54.879"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-blink-features</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20231016 07:43:54.879" endtime="20231016 07:43:54.879"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-infobars</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20231016 07:43:54.879" endtime="20231016 07:43:54.879"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_experimental_option</arg>
+<arg>useAutomationExtension</arg>
+<arg>${False}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20231016 07:43:54.879" endtime="20231016 07:43:54.879"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${prefs}</var>
+<arg>credentials_enable_service=${FALSE}</arg>
+<arg>profile.password_manager_enabled=${False}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20231016 07:43:54.887" level="INFO">${prefs} = {'credentials_enable_service': False, 'profile.password_manager_enabled': False}</msg>
+<status status="PASS" starttime="20231016 07:43:54.879" endtime="20231016 07:43:54.887"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_experimental_option</arg>
+<arg>prefs</arg>
+<arg>${prefs}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20231016 07:43:54.887" endtime="20231016 07:43:54.887"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${userAgent}</var>
+<arg>--user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231016 07:43:54.887" level="INFO">${userAgent} = --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"</msg>
+<status status="PASS" starttime="20231016 07:43:54.887" endtime="20231016 07:43:54.887"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>${userAgent}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20231016 07:43:54.887" endtime="20231016 07:43:54.887"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${excluded}</var>
+<arg>enable-automation</arg>
+<arg>enable-logging</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231016 07:43:54.887" level="INFO">${excluded} = ['enable-automation', 'enable-logging']</msg>
+<status status="PASS" starttime="20231016 07:43:54.887" endtime="20231016 07:43:54.887"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_experimental_option</arg>
+<arg>excludeSwitches</arg>
+<arg>${excluded}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20231016 07:43:54.894" endtime="20231016 07:43:54.894"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>driver_name=Chrome</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20231016 07:43:54.895" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20231016 07:43:54.894" endtime="20231016 07:43:57.643"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231016 07:43:57.646" level="INFO">Opening url 'https://rahulshettyacademy.com/AutomationPractice/'</msg>
+<status status="PASS" starttime="20231016 07:43:57.643" endtime="20231016 07:43:59.868"/>
+</kw>
+<status status="PASS" starttime="20231016 07:43:54.861" endtime="20231016 07:43:59.870"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231016 07:43:59.870" endtime="20231016 07:44:00.168"/>
+</kw>
+<status status="PASS" starttime="20231016 07:43:54.861" endtime="20231016 07:44:00.168"/>
+</kw>
+<test id="s1-t1" name="LoginTest" line="10">
+<kw name="LoginToApplication" library="base_data">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://input[@id='checkBoxOption1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231016 07:44:00.171" level="INFO">Clicking element 'xpath://input[@id='checkBoxOption1']'.</msg>
+<status status="PASS" starttime="20231016 07:44:00.171" endtime="20231016 07:44:00.330"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://input[@id='name']</arg>
+<arg>Devendra</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231016 07:44:00.330" level="INFO">Typing text 'Devendra' into text field 'xpath://input[@id='name']'.</msg>
+<status status="PASS" starttime="20231016 07:44:00.330" endtime="20231016 07:44:00.567"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>checkBoxOption2</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20231016 07:44:00.567" level="INFO">Selecting checkbox 'checkBoxOption2'.</msg>
+<status status="PASS" starttime="20231016 07:44:00.567" endtime="20231016 07:44:00.651"/>
+</kw>
+<status status="PASS" starttime="20231016 07:44:00.168" endtime="20231016 07:44:00.651"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://input[@value='radio1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231016 07:44:00.657" level="INFO">Clicking element 'xpath://input[@value='radio1']'.</msg>
+<status status="PASS" starttime="20231016 07:44:00.651" endtime="20231016 07:44:00.715"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isExist}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${radio}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${radio}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20231016 07:44:01.124" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231016 07:44:01.124" level="FAIL">Element with locator '//*[contains(text(),'Option4')]' not found.</msg>
+<status status="FAIL" starttime="20231016 07:44:00.715" endtime="20231016 07:44:01.189"/>
+</kw>
+<msg timestamp="20231016 07:44:01.189" level="INFO">${isExist} = False</msg>
+<status status="PASS" starttime="20231016 07:44:00.715" endtime="20231016 07:44:01.189"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${isExist}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231016 07:44:01.189" endtime="20231016 07:44:01.198"/>
+</kw>
+<status status="PASS" starttime="20231016 07:44:00.168" endtime="20231016 07:44:01.198"/>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231016 07:44:01.198" endtime="20231016 07:44:03.485"/>
+</kw>
+<status status="PASS" starttime="20231016 07:43:53.899" endtime="20231016 07:44:03.485"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC1">TC1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
